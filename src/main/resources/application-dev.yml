@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  context-path: /demo
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+
+spring:
+  aop:
+    auto: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/my_db?characterEncoding=utf8
+    username: root
+    password: turing1984
+    driver-class-name: com.mysql.jdbc.Driver
+# If you want to init db, enable it.
+#    schema: classpath:import.sql
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:com/example/mybatis/mapper/**/*.xml
+  type-aliases-package: com.example.domain
+
+logging:
+  config: classpath:logback-spring.xml
+  file: logs/dev_app.logs
+
+security:
+  user:
+    name: root
+    password: 123456
+  sessions: stateless
+
+
+
+
+
+
