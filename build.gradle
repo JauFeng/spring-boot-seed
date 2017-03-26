@@ -22,6 +22,8 @@ repositories {
 
 
 dependencies {
+	compile 'org.redisson:redisson:3.3.2'
+	
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-actuator-docs')
 	compile('org.springframework.boot:spring-boot-starter-aop')
